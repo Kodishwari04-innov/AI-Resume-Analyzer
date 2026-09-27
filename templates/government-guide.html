@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Government Exam Guide - ResumeAI</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #080d1d;
+            color: white;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1150px;
+            margin: 40px auto;
+        }
+
+        .back {
+            color: #9aa7ff;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .back:hover {
+            color: white;
+        }
+
+        .hero {
+            text-align: center;
+            margin: 35px 0 45px;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            color: #aab3d1;
+            max-width: 720px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        .category {
+            margin-bottom: 35px;
+        }
+
+        .category-title {
+            font-size: 22px;
+            margin-bottom: 16px;
+            color: #e8ebff;
+        }
+
+        .exam-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .exam-card {
+            background: #141b33;
+            border: 1px solid #2b3963;
+            border-radius: 15px;
+            padding: 20px;
+            transition: 0.2s;
+        }
+
+        .exam-card:hover {
+            transform: translateY(-3px);
+            border-color: #6675ff;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+        }
+
+        .exam-card h3 {
+            margin: 0 0 8px;
+            font-size: 17px;
+        }
+
+        .exam-card p {
+            margin: 0 0 16px;
+            color: #929dbc;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .exam-btn {
+            display: inline-block;
+            padding: 9px 14px;
+            border-radius: 8px;
+            background: #6675ff;
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .exam-btn:hover {
+            background: #7a87ff;
+        }
+
+        .note {
+            margin-top: 45px;
+            padding: 18px;
+            border: 1px solid #29375f;
+            background: #10172e;
+            border-radius: 12px;
+            color: #8993b3;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 850px) {
+            .exam-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 550px) {
+            .exam-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <a class="back" href="/">
+        ← Back to ResumeAI
+    </a>
+
+    <div class="hero">
+        <h1>🏛️ Government Exam Guide</h1>
+
+        <p>
+            Explore major government examinations across engineering,
+            civil services, banking, railways, defence, teaching,
+            science and state government careers.
+        </p>
+    </div>
+
+
+    <!-- UPSC -->
+
+    <div class="category">
+
+        <div class="category-title">🇮🇳 UPSC Examinations</div>
+
+        <div class="exam-grid">
+
+            <div class="exam-card">
+                <h3>UPSC Civil Services Examination</h3>
+                <p>IAS, IPS, IFS and other central civil services.</p>
+                <a class="exam-btn" href="/exam-info?exam=upsc-cse">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>UPSC Engineering Services</h3>
+                <p>Technical engineering services under the Government of India.</p>
+                <a class="exam-btn" href="/exam-info?exam=upsc-ese">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>CDS</h3>
+                <p>Combined Defence Services examination.</p>
+                <a class="exam-btn" href="/exam-info?exam=cds">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>NDA</h3>
+                <p>National Defence Academy examination.</p>
+                <a class="exam-btn" href="/exam-info?exam=nda">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>CAPF</h3>
+                <p>Central Armed Police Forces examination.</p>
+                <a class="exam-btn" href="/exam-info?exam=capf">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>Indian Forest Service</h3>
+                <p>UPSC examination for forest service careers.</p>
+                <a class="exam-btn" href="/exam-info?exam=ifs">View Details</a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ENGINEERING -->
+
+    <div class="category">
+
+        <div class="category-title">⚙️ Engineering & Technical</div>
+
+        <div class="exam-grid">
+
+            <div class="exam-card">
+                <h3>GATE</h3>
+                <p>Graduate Aptitude Test in Engineering.</p>
+                <a class="exam-btn" href="/exam/gate">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>SSC JE</h3>
+                <p>Junior Engineer recruitment through SSC.</p>
+                <a class="exam-btn" href="/exam-info?exam=ssc-je">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>RRB JE</h3>
+                <p>Railway Junior Engineer recruitment.</p>
+                <a class="exam-btn" href="/exam-info?exam=rrb-je">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>DRDO Recruitment</h3>
+                <p>Technical and scientific opportunities in DRDO.</p>
+                <a class="exam-btn" href="/exam-info?exam=drdo">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>ISRO Careers</h3>
+                <p>Technical and scientific opportunities at ISRO.</p>
+                <a class="exam-btn" href="/exam-info?exam=isro">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>Technical Government Jobs</h3>
+                <p>Explore engineering-oriented government careers.</p>
+                <a class="exam-btn" href="/exam-info?exam=technical-govt">View Details</a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- SSC -->
+
+    <div class="category">
+
+        <div class="category-title">📋 SSC Examinations</div>
+
+        <div class="exam-grid">
+
+            <div class="exam-card">
+                <h3>SSC CGL</h3>
+                <p>Graduate-level recruitment for central government posts.</p>
+                <a class="exam-btn" href="/exam-info?exam=ssc-cgl">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>SSC CHSL</h3>
+                <p>Recruitment for various 12th-standard level posts.</p>
+                <a class="exam-btn" href="/exam-info?exam=ssc-chsl">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>SSC MTS</h3>
+                <p>Multi-Tasking Staff recruitment examination.</p>
+                <a class="exam-btn" href="/exam-info?exam=ssc-mts">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>SSC Selection Post</h3>
+                <p>Recruitment for various departments and qualifications.</p>
+                <a class="exam-btn" href="/exam-info?exam=ssc-selection">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>SSC Stenographer</h3>
+                <p>Stenographer recruitment examination.</p>
+                <a class="exam-btn" href="/exam-info?exam=ssc-steno">View Details</a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- BANKING -->
+
+    <div class="category">
+
+        <div class="category-title">🏦 Banking & Finance</div>
+
+        <div class="exam-grid">
+
+            <div class="exam-card">
+                <h3>IBPS PO</h3>
+                <p>Probationary Officer recruitment in participating banks.</p>
+                <a class="exam-btn" href="/exam-info?exam=ibps-po">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>IBPS Clerk</h3>
+                <p>Clerical recruitment through IBPS.</p>
+                <a class="exam-btn" href="/exam-info?exam=ibps-clerk">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>IBPS RRB</h3>
+                <p>Recruitment for Regional Rural Banks.</p>
+                <a class="exam-btn" href="/exam-info?exam=ibps-rrb">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>SBI PO</h3>
+                <p>Probationary Officer recruitment at SBI.</p>
+                <a class="exam-btn" href="/exam-info?exam=sbi-po">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>SBI Clerk</h3>
+                <p>Junior Associate recruitment at SBI.</p>
+                <a class="exam-btn" href="/exam-info?exam=sbi-clerk">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>RBI Opportunities</h3>
+                <p>Explore major recruitment opportunities at RBI.</p>
+                <a class="exam-btn" href="/exam-info?exam=rbi">View Details</a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- RAILWAYS -->
+
+    <div class="category">
+
+        <div class="category-title">🚆 Railway Examinations</div>
+
+        <div class="exam-grid">
+
+            <div class="exam-card">
+                <h3>RRB NTPC</h3>
+                <p>Non-Technical Popular Categories recruitment.</p>
+                <a class="exam-btn" href="/exam-info?exam=rrb-ntpc">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>RRB JE</h3>
+                <p>Junior Engineer railway recruitment.</p>
+                <a class="exam-btn" href="/exam-info?exam=rrb-je">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>RRB ALP</h3>
+                <p>Assistant Loco Pilot recruitment.</p>
+                <a class="exam-btn" href="/exam-info?exam=rrb-alp">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>RRB Group D</h3>
+                <p>Various Level-1 railway posts.</p>
+                <a class="exam-btn" href="/exam-info?exam=rrb-group-d">View Details</a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- DEFENCE -->
+
+    <div class="category">
+
+        <div class="category-title">🛡️ Defence</div>
+
+        <div class="exam-grid">
+
+            <div class="exam-card">
+                <h3>NDA</h3>
+                <p>National Defence Academy entry.</p>
+                <a class="exam-btn" href="/exam-info?exam=nda">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>CDS</h3>
+                <p>Combined Defence Services entry.</p>
+                <a class="exam-btn" href="/exam-info?exam=cds">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>AFCAT</h3>
+                <p>Air Force Common Admission Test.</p>
+                <a class="exam-btn" href="/exam-info?exam=afcat">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>Indian Coast Guard</h3>
+                <p>Officer and technical opportunities.</p>
+                <a class="exam-btn" href="/exam-info?exam=coast-guard">View Details</a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- TNPSC -->
+
+    <div class="category">
+
+        <div class="category-title">🌟 Tamil Nadu Government Exams</div>
+
+        <div class="exam-grid">
+
+            <div class="exam-card">
+                <h3>TNPSC Group 1</h3>
+                <p>Higher-level Tamil Nadu state services.</p>
+                <a class="exam-btn" href="/exam-info?exam=tnpsc-group1">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>TNPSC Group 2</h3>
+                <p>Combined Civil Services Examination.</p>
+                <a class="exam-btn" href="/exam-info?exam=tnpsc-group2">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>TNPSC Group 4</h3>
+                <p>Entry-level state government services.</p>
+                <a class="exam-btn" href="/exam-info?exam=tnpsc-group4">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>TNPSC Technical Recruitment</h3>
+                <p>Technical and engineering-related state posts.</p>
+                <a class="exam-btn" href="/exam-info?exam=tnpsc-technical">View Details</a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- TEACHING -->
+
+    <div class="category">
+
+        <div class="category-title">📚 Teaching & Education</div>
+
+        <div class="exam-grid">
+
+            <div class="exam-card">
+                <h3>CTET</h3>
+                <p>Central Teacher Eligibility Test.</p>
+                <a class="exam-btn" href="/exam-info?exam=ctet">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>UGC NET</h3>
+                <p>Eligibility test for teaching and research.</p>
+                <a class="exam-btn" href="/exam-info?exam=ugc-net">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>State TET</h3>
+                <p>Teacher eligibility examinations conducted by states.</p>
+                <a class="exam-btn" href="/exam-info?exam=state-tet">View Details</a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- SCIENCE -->
+
+    <div class="category">
+
+        <div class="category-title">🔬 Science & Research</div>
+
+        <div class="exam-grid">
+
+            <div class="exam-card">
+                <h3>CSIR-UGC NET</h3>
+                <p>Science research and academic eligibility examination.</p>
+                <a class="exam-btn" href="/exam-info?exam=csir-net">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>ICMR Recruitment</h3>
+                <p>Scientific and research opportunities.</p>
+                <a class="exam-btn" href="/exam-info?exam=icmr">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>DRDO</h3>
+                <p>Research and technical opportunities in defence R&D.</p>
+                <a class="exam-btn" href="/exam-info?exam=drdo">View Details</a>
+            </div>
+
+            <div class="exam-card">
+                <h3>ISRO</h3>
+                <p>Space research and engineering careers.</p>
+                <a class="exam-btn" href="/exam-info?exam=isro">View Details</a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="note">
+        <strong>Note:</strong> Exam eligibility, vacancies, dates and selection rules
+        can change between recruitment cycles. ResumeAI provides a quick overview;
+        always verify the latest notification through the official organisation website.
+    </div>
+
+</div>
+
+</body>
+</html>

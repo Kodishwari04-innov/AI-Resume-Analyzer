@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ResumeAI - Career & Job Analyzer</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+
+            background:
+                radial-gradient(circle at top left, #312e81 0%, transparent 35%),
+                radial-gradient(circle at bottom right, #1d4ed8 0%, transparent 30%),
+                #0f172a;
+
+            color: white;
+        }
+
+        .navbar {
+            height: 75px;
+            padding: 0 8%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            border-bottom: 1px solid rgba(255,255,255,0.12);
+
+            background: rgba(15,23,42,0.65);
+
+            backdrop-filter: blur(15px);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #8b5cf6;
+        }
+
+        .badge {
+            padding: 8px 16px;
+
+            border-radius: 20px;
+
+            background: rgba(139,92,246,0.18);
+
+            color: #c4b5fd;
+
+            font-size: 13px;
+        }
+
+        .container {
+            width: 88%;
+            max-width: 1200px;
+
+            margin: 60px auto;
+        }
+
+        .hero {
+            text-align: center;
+
+            margin-bottom: 45px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+
+            margin-bottom: 18px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(90deg, #a78bfa, #38bdf8);
+
+            -webkit-background-clip: text;
+
+            color: transparent;
+        }
+
+        .hero p {
+            color: #94a3b8;
+
+            font-size: 17px;
+
+            line-height: 1.6;
+        }
+
+        .mode-title {
+            text-align: center;
+
+            margin-bottom: 20px;
+
+            color: #cbd5e1;
+
+            font-size: 16px;
+        }
+
+        .modes {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+        .mode-card {
+            padding: 30px;
+
+            border-radius: 22px;
+
+            background: rgba(255,255,255,0.08);
+
+            border: 1px solid rgba(255,255,255,0.12);
+
+            backdrop-filter: blur(15px);
+
+            box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+
+            transition: 0.3s;
+        }
+
+        .mode-card:hover {
+            transform: translateY(-6px);
+
+            border-color: rgba(139,92,246,0.5);
+        }
+
+        .icon {
+            font-size: 38px;
+
+            margin-bottom: 18px;
+        }
+
+        .mode-card h2 {
+            font-size: 22px;
+
+            margin-bottom: 12px;
+        }
+
+        .mode-card p {
+            color: #94a3b8;
+
+            line-height: 1.6;
+
+            font-size: 14px;
+
+            margin-bottom: 22px;
+        }
+
+        .mode-card ul {
+            list-style: none;
+
+            margin-bottom: 25px;
+        }
+
+        .mode-card li {
+            color: #cbd5e1;
+
+            margin-bottom: 10px;
+
+            font-size: 14px;
+        }
+
+        .mode-card li::before {
+            content: "✓";
+
+            color: #a78bfa;
+
+            font-weight: bold;
+
+            margin-right: 8px;
+        }
+
+        .button {
+            display: inline-block;
+
+            width: 100%;
+
+            padding: 14px 20px;
+
+            border: none;
+
+            border-radius: 30px;
+
+            text-align: center;
+
+            text-decoration: none;
+
+            color: white;
+
+            background: linear-gradient(
+                90deg,
+                #7c3aed,
+                #2563eb
+            );
+
+            font-size: 15px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 10px 25px rgba(79,70,229,0.4);
+        }
+
+        .exam-button {
+            background: linear-gradient(
+                90deg,
+                #ea580c,
+                #dc2626
+            );
+        }
+
+        .features {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 35px;
+
+            margin-top: 55px;
+
+            flex-wrap: wrap;
+        }
+
+        .feature {
+            color: #94a3b8;
+
+            font-size: 14px;
+        }
+
+        .feature span {
+            color: #a78bfa;
+
+            margin-right: 6px;
+        }
+
+        footer {
+            text-align: center;
+
+            margin-top: 60px;
+
+            padding-bottom: 30px;
+
+            color: #64748b;
+
+            font-size: 13px;
+        }
+
+        @media (max-width: 950px) {
+
+            .modes {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+        @media (max-width: 650px) {
+
+            .modes {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .container {
+                width: 92%;
+            }
+
+            .navbar {
+                padding: 0 5%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Resume<span>AI</span>
+        </div>
+
+        <div class="badge">
+            ✨ AI Career Platform
+        </div>
+
+    </nav>
+
+
+    <div class="container">
+
+
+        <div class="hero">
+
+            <h1>
+                AI Resume & <span>Career Analyzer</span>
+            </h1>
+
+            <p>
+                Analyze your resume, discover skill gaps,
+                explore career opportunities and understand
+                possible government career pathways.
+            </p>
+
+        </div>
+
+
+        <div class="mode-title">
+            Choose an analysis mode
+        </div>
+
+
+        <div class="modes">
+
+
+            <!-- JOB MATCH -->
+
+            <div class="mode-card">
+
+                <div class="icon">
+                    🎯
+                </div>
+
+                <h2>
+                    Job Match Analyzer
+                </h2>
+
+                <p>
+                    Compare your resume with a specific
+                    job description using AI.
+                </p>
+
+                <ul>
+
+                    <li>
+                        Overall Match Score
+                    </li>
+
+                    <li>
+                        Matched Skills
+                    </li>
+
+                    <li>
+                        Missing Skills
+                    </li>
+
+                    <li>
+                        AI Recommendations
+                    </li>
+
+                </ul>
+
+                <a
+                    href="/job-match"
+                    class="button"
+                >
+                    Analyze Job Match →
+                </a>
+
+            </div>
+
+
+            <!-- CAREER ANALYSIS -->
+
+            <div class="mode-card">
+
+                <div class="icon">
+                    🚀
+                </div>
+
+                <h2>
+                    Career Skill Analyzer
+                </h2>
+
+                <p>
+                    Upload your resume and discover
+                    skills you can improve for your career.
+                </p>
+
+                <ul>
+
+                    <li>
+                        Education Detection
+                    </li>
+
+                    <li>
+                        Current Skills
+                    </li>
+
+                    <li>
+                        Recommended Skills
+                    </li>
+
+                    <li>
+                        Career Directions
+                    </li>
+
+                </ul>
+
+                <a
+                    href="/career-analysis"
+                    class="button"
+                >
+                    Analyze My Career →
+                </a>
+
+            </div>
+
+
+            <!-- GOVERNMENT EXAM GUIDE -->
+
+            <div class="mode-card">
+
+                <div class="icon">
+                    🏛️
+                </div>
+
+                <h2>
+                    Government Exam Guide
+                </h2>
+
+                <p>
+                    Explore government career pathways
+                    based on your education and interests.
+                </p>
+
+                <ul>
+
+                    <li>
+                        Qualification-Based Guidance
+                    </li>
+
+                    <li>
+                        Exam Categories
+                    </li>
+
+                    <li>
+                        Career Pathways
+                    </li>
+
+                    <li>
+                        Eligibility Guidance
+                    </li>
+
+                </ul>
+
+                <a
+                    href="/government-guide"
+                    class="button exam-button"
+                >
+                    Explore Government Careers →
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="features">
+
+            <div class="feature">
+                <span>✓</span>
+                AI Semantic Analysis
+            </div>
+
+            <div class="feature">
+                <span>✓</span>
+                Skill Gap Detection
+            </div>
+
+            <div class="feature">
+                <span>✓</span>
+                Career Insights
+            </div>
+
+            <div class="feature">
+                <span>✓</span>
+                Government Career Guidance
+            </div>
+
+        </div>
+
+
+        <footer>
+
+            ResumeAI • Intelligent Career & Job Analysis Platform
+
+        </footer>
+
+
+    </div>
+
+
+</body>
+
+</html>
